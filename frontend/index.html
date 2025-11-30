@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1 class="main-title">Smart Task Analyzer</h1>
+
+    <div class="container">
+
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <h2>Enter Tasks (JSON Format)</h2>
+
+            <textarea id="taskInput" placeholder='Enter JSON array here...'></textarea>
+
+            <label for="strategy">Sorting Strategy:</label>
+            <select id="strategy">
+                <option value="smart">Smart Balance</option>
+                <option value="fastest">Fastest Wins</option>
+                <option value="impact">High Impact</option>
+                <option value="deadline">Deadline Driven</option>
+            </select>
+
+            <button id="analyzeBtn">Analyze Tasks</button>
+            <button id="suggestBtn" class="secondary-btn">Suggest Tasks for Today</button>
+
+            <p class="tip">
+                Tip: Use ISO dates (YYYY-MM-DD).  
+            </p>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <h2>Results</h2>
+            <div id="results" class="results-box">
+                <p>No results yet - Enter tasks and click Analyze.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

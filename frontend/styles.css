@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Remove page scrollbar completely */
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background: #f2f4f7;
+}
+
+/* PAGE TITLE */
+.main-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 15px 0;
+    color: #222;
+    letter-spacing: 1px;
+    user-select: none;
+    background: #f2f4f7;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    height: calc(100% - 70px); /* Remaining height after heading */
+    padding: 20px;
+    gap: 20px;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* No scroll in left panel */
+}
+
+/* Textarea kept at fixed height */
+.left-panel textarea {
+    width: 100%;
+    flex-shrink: 0;
+    height: 250px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+/* Buttons & Select */
+.left-panel select,
+.left-panel button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Primary Button */
+#analyzeBtn {
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+#analyzeBtn:hover {
+    background: #0056c7;
+}
+
+/* Suggest Button */
+.secondary-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.secondary-btn:hover {
+    background: #1e7f36;
+}
+
+.tip {
+    margin-top: 0px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 65%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Only results box scrolls */
+.results-box {
+    margin-top: 15px;
+    padding-right: 10px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* Task Card */
+.task-card {
+    background: #fafafa;
+    padding: 15px;
+    border-left: 4px solid #007bff;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* Priority Tags */
+.priority-tag {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.high { background: #d9534f; }
+.medium { background: #f0ad4e; }
+.low { background: #5cb85c; }
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto; /* Allow scroll on small screens */
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        height: auto;
+    }
+
+    .results-box {
+        height: auto;
+        max-height: 350px;
+    }
+}
