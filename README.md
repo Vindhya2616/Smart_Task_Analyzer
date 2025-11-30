@@ -256,8 +256,7 @@ Output
 
 {
   "tasks": [...],
-  "explanation": "These tasks are suggested for today..."  
-} 
+  "explanation": "These tasks are suggested for today..." } 
 
 ## 🖥️ Frontend Usage
 
@@ -280,10 +279,15 @@ Suggest Tasks for Today
 
 This project handles:
 ✔ Overdue tasks
+
 ✔ Missing optional fields (auto-filled)
+
 ✔ Missing required fields (error)
-✔ Tasks due today / tomorrow
+
+✔ Tasks due today 
+
 ✔ Invalid JSON
+
 ✔ Integer-based dependencies
 
 
