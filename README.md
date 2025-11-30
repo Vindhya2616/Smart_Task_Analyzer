@@ -278,6 +278,7 @@ Suggest Tasks for Today
 ## 🧪 Edge Case Handling
 
 This project handles:
+
 ✔ Overdue tasks
 
 ✔ Missing optional fields (auto-filled)
